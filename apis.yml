@@ -1,10 +1,20 @@
 aid: ambient-clinical-analytics
 name: Ambient Clinical Analytics
-description: 'Ambient Clinical Analytics is a company surfaced via the API Evangelist harvest backlog
-  (source: secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'Ambient Clinical Analytics is a Rochester, Minnesota clinical decision
+  support company spun out of Mayo Clinic in 2013 and operating from the Mayo Clinic
+  Business Accelerator. Its AWARE Patient Surveillance and AWARE Sepsis DART products
+  are FDA Class II cleared, EMR-agnostic "bolt-on" dashboards that apply more than
+  1,200 licensed Mayo Clinic rules and algorithms to live patient data, delivering
+  point-of-care data visualization, situational awareness of a patient''s total condition,
+  and smart notifications for conditions such as sepsis across ICU, tele-ICU and remote
+  patient monitoring settings. Deployment is carried out by third-party EMR data-integration
+  partners rather than by hospital IT; the company publishes no public developer program,
+  API documentation, or machine-readable API contract.'
 url: https://raw.githubusercontent.com/api-evangelist/ambient-clinical-analytics/refs/heads/main/apis.yml
+image: https://ambientclinical.com/wp-content/themes/ambient/images/content/logo-color.png
 x-type: company
 x-source: harvest:secondary-market
+x-harvest-reference: https://www.hiive.com/securities/ambient-clinical-analytics-stock
 x-tier: stub
 x-tier-reason: harvest
 specificationVersion: '0.20'
@@ -12,6 +22,14 @@ created: '2026-08-06'
 modified: '2026-08-06'
 tags:
 - Company
+- Healthcare
+- Clinical Decision Support
+- Patient Monitoring
+- Sepsis
+- Medical Devices
+- Electronic Health Records
+- Analytics
+- Tele-ICU
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +37,46 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/ambient-clinical-analytics-domain-security.yml
 - type: Website
-  url: https://www.hiive.com/securities/ambient-clinical-analytics-stock
+  url: https://ambientclinical.com/
+- type: Blog
+  url: https://ambientclinical.com/category/blog/
+- type: BlogRSS
+  url: https://ambientclinical.com/feed/
+- type: Support
+  url: https://ambientclinical.com/contact/
+- type: PrivacyPolicy
+  url: https://ambientclinical.com/ambient-clinical-analytics-privacy-policy/
+- type: Publications
+  url: https://ambientclinical.com/publications/
+- type: Conformance
+  url: conformance/ambient-clinical-analytics-conformance.yml
+- type: LLMsTxt
+  url: llms/ambient-clinical-analytics-llms.txt
+x-enrichment:
+  date: '2026-08-06'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: Ambient Clinical Analytics sells an FDA-cleared bedside EMR "bolt-on" whose
+    hospital integration is performed by third-party data-integration partners, so
+    the marketing WordPress site is the entire public surface — no api., developer.,
+    docs., portal. or app. subdomain of ambientclinical.com resolves in DNS, and the
+    site names no interoperability standard (no HL7, no FHIR) anywhere.
+  evidence:
+  - url: https://ambientclinical.com/installation/
+    status: 200
+  - url: https://ambientclinical.com/openapi.json
+    status: 404
+  - url: https://ambientclinical.com/.well-known/agent-card.json
+    status: 404
+  - url: https://ambientclinical.com/llms.txt
+    status: 404
+  - url: https://api.github.com/orgs/ambient-clinical-analytics
+    status: 404
+  checked: '2026-08-06'

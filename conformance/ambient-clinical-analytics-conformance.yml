@@ -1,0 +1,65 @@
+generated: '2026-08-06'
+method: searched
+source: https://ambientclinical.com/about/
+note: >-
+  Ambient Clinical Analytics publishes no API, so there is no OpenAPI, security
+  scheme, or error envelope to derive API-level conformance from. What the company
+  does publish is medical-device regulatory posture, recorded here verbatim from
+  its own pages. The absence entries below are the substantive finding for a
+  healthcare-interoperability cohort: an FDA-cleared, "EMR agnostic" bedside
+  product that names no interoperability standard anywhere on its public site.
+standards:
+- id: fda-510k-class-ii
+  conforms: true
+  category: regulatory
+  evidence: >-
+    "Ambient has achieved FDA Class II cleared ... ISO 13485:2016 Certification,
+    and is accepted by the Patient Safety Movement." — https://ambientclinical.com/about/
+  evidence_url: https://ambientclinical.com/about/
+- id: iso-13485-2016
+  conforms: true
+  category: quality-management
+  evidence: >-
+    ISO 13485:2016 Certification stated on the company About page (medical device
+    quality management systems).
+  evidence_url: https://ambientclinical.com/about/
+- id: hl7-v2
+  conforms: unknown
+  category: interoperability
+  evidence: >-
+    Not named anywhere on the public site. The Installation page states the
+    products are a "bolt-on" to the EMR and that "data integration led by our
+    integration partners" performs the interface work, without naming a standard.
+  evidence_url: https://ambientclinical.com/installation/
+- id: fhir-r4
+  conforms: unknown
+  category: interoperability
+  evidence: >-
+    No FHIR mention found on any public page probed (home, about, installation,
+    tele-icu, remote-patient-monitoring, aware-critical-care).
+  evidence_url: https://ambientclinical.com/installation/
+- id: hipaa
+  conforms: unknown
+  category: privacy
+  evidence: >-
+    HIPAA is not mentioned in the July 2026 privacy policy, which covers only
+    website visitor personal information, not protected health information
+    handled by the AWARE products.
+  evidence_url: https://ambientclinical.com/ambient-clinical-analytics-privacy-policy/
+- id: oauth2
+  conforms: false
+  category: security
+  evidence: No public API, no documented authorization surface.
+- id: rfc9457-problem-details
+  conforms: false
+  category: errors
+  evidence: No public API contract published.
+x-evidence:
+  checked: '2026-08-06'
+  probes:
+  - url: https://ambientclinical.com/about/
+    status: 200
+  - url: https://ambientclinical.com/installation/
+    status: 200
+  - url: https://ambientclinical.com/ambient-clinical-analytics-privacy-policy/
+    status: 200
