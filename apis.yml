@@ -11,6 +11,17 @@ description: 'Ambient Clinical Analytics is a Rochester, Minnesota clinical deci
   partners rather than by hospital IT; the company publishes no public developer program,
   API documentation, or machine-readable API contract.'
 url: https://raw.githubusercontent.com/api-evangelist/ambient-clinical-analytics/refs/heads/main/apis.yml
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://ambientclinical.com/wp-content/themes/ambient/images/content/logo-color.png
 x-type: company
 x-source: harvest:secondary-market
