@@ -24,12 +24,12 @@
     },
     {
       "source": "https://ambientclinical.com/category/blog/",
-      "feed_url": "https://ambientclinical.com/category/blog/feed/",
+      "feed_url": "https://ambientclinical.com/feed/",
       "title": "",
       "saved": 0,
       "method": "discovered"
     }
   ],
-  "post_count": 12,
-  "fetched": "2026-08-22T20:20:02Z"
+  "post_count": 13,
+  "fetched": "2026-08-30T22:33:40Z"
 }
